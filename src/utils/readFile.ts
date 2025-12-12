@@ -1,0 +1,8 @@
+import * as fs from 'node:fs';
+
+
+export function readFile(filePath: string): string[] {
+    return fs.readFileSync(filePath,'utf8')
+        .split("\n")
+        .filter((line) => line);
+}
